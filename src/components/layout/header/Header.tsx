@@ -1,3 +1,4 @@
+import ThemedIcon from "../../theme/ThemedIcon";
 import {
   BigContainer,
   BottomBar,
@@ -23,9 +24,20 @@ const Header = ({ toggleTheme }: HeaderProps) => {
   return (
     <BigContainer>
       <TopBar>
-        <Logo src="/assets/logos/header/header-logo.svg" />
+        <ThemedIcon
+          light={<Logo src="/assets/logos/header/header-logo-black.svg" />}
+          dark={<Logo src="/assets/logos/header/header-logo-white.svg" />}
+        />
+
         <SearchBar>
-          <SearchIcon src="/assets/logos/header/search-icon.svg" />
+          <ThemedIcon
+            light={
+              <SearchIcon src="/assets/logos/header/search-icon-black.svg" />
+            }
+            dark={
+              <SearchIcon src="/assets/logos/header/search-icon-white.svg" />
+            }
+          />
           <SearchInput type="text" placeholder="Search" />
         </SearchBar>
         <NavIcons>
@@ -35,11 +47,49 @@ const Header = ({ toggleTheme }: HeaderProps) => {
           <NavItem>Blog</NavItem>
         </NavIcons>
         <UserActions>
-          <HeaderIcon src="/assets/logos/header/header-heart.svg" />
-          <HeaderIcon src="/assets/logos/header/header-busket.svg" />
-          <HeaderIcon src="/assets/logos/header/header-avatar.svg" />
+          <ThemedIcon
+            light={
+              <HeaderIcon src="/assets/logos/header/header-heart-black.svg" />
+            }
+            dark={
+              <HeaderIcon src="/assets/logos/header/header-heart-white.svg" />
+            }
+          />
+          <ThemedIcon
+            light={
+              <HeaderIcon src="/assets/logos/header/header-busket-black.svg" />
+            }
+            dark={
+              <HeaderIcon src="/assets/logos/header/header-busket-white.svg" />
+            }
+          />
+          <ThemedIcon
+            light={
+              <HeaderIcon src="/assets/logos/header/header-avatar-black.svg" />
+            }
+            dark={
+              <HeaderIcon src="/assets/logos/header/header-avatar-white.svg" />
+            }
+          />
         </UserActions>
-        <DarkLightButton onClick={toggleTheme}>🌙/☀️</DarkLightButton>
+        <ThemedIcon
+          light={
+            <DarkLightButton
+              onClick={toggleTheme}
+              style={{ fontSize: "24px", color: "#111111" }}
+            >
+              🌘
+            </DarkLightButton>
+          }
+          dark={
+            <DarkLightButton
+              onClick={toggleTheme}
+              style={{ fontSize: "24px", color: "#ffffff" }}
+            >
+              🌕
+            </DarkLightButton>
+          }
+        ></ThemedIcon>
       </TopBar>
 
       <BottomBar>

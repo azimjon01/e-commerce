@@ -53,10 +53,15 @@ export const SearchIcon = styled.img({
 });
 
 export const SearchInput = styled.input((props) => ({
-  color: props.theme.colors.text,
+  color: props.theme.mode === "light" ? "#111111" : "#ffffff",
+  backgroundColor: props.theme.mode === "light" ? "#ffffff" : "#333333",
+  border: `1px solid ${props.theme.mode === "light" ? "#ccc" : "#444"}`,
+
+  "::placeholder": {
+    color: props.theme.mode === "light" ? "#000" : "#fff",
+  },
 }));
 
-// Navigatsiya ikonkalari
 export const NavIcons = styled.div((props) => ({
   display: "flex",
   gap: "30px",
