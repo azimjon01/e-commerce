@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer((props) => ({
   padding: "50px 10%",
   backgroundColor: props.theme.colors.background || "#000",
   color: props.theme.colors.text || "#fff",
+  borderTop: `1px solid ${props.theme.mode === "light" ? "#111111" : "#ffffff"}`,
 }));
 
 export const FooterSection = styled.div({

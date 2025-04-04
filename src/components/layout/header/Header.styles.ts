@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-// Katta container
 export const BigContainer = styled.div((props) => ({
   display: "flex",
   flexDirection: "column",
@@ -10,9 +9,9 @@ export const BigContainer = styled.div((props) => ({
   backgroundColor: props.theme.colors.background,
   color: props.theme.colors.text,
   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
+  borderBottom: `1px solid ${props.theme.mode === "light" ? "#111111" : "#ffffff"}`,
 }));
 
-// Yuqori bar
 export const TopBar = styled.div({
   display: "flex",
   justifyContent: "center",
@@ -22,13 +21,11 @@ export const TopBar = styled.div({
   padding: "15px 0",
 });
 
-// Logo
 export const Logo = styled.img({
   width: 76,
   height: 22,
 });
 
-// Qidiruv paneli
 export const SearchBar = styled.div((props) => ({
   display: "flex",
   alignItems: "center",
@@ -100,7 +97,6 @@ export const HeaderIcon = styled.img({
   height: 20,
 });
 
-// Pastgi bar
 export const BottomBar = styled.div({
   display: "flex",
   justifyContent: "center",
@@ -138,7 +134,6 @@ export const BottomIcon = styled.img({
   height: 20,
 });
 
-// Dark / Light toggle button
 export const DarkLightButton = styled.button((props) => ({
   background: "none",
   border: "none",

@@ -1,22 +1,24 @@
-// src/emotion.d.ts
-
 import "@emotion/react";
 
 declare module "@emotion/react" {
   export interface Theme {
+    mode: string;
     colors: {
+      primary: string;
+      secondary: string;
       background: string;
       text: string;
-      primary: string;
       border: string;
+    };
+    font: {
+      base: string;
+      heading: string;
     };
     spacing: {
       sm: string;
       md: string;
       lg: string;
     };
-    font: {
-      heading: string;
-    };
+    borderRadius: string;
   }
 }
