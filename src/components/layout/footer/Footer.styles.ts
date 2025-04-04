@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
-export const FooterContainer = styled.footer({
+export const FooterContainer = styled.footer((props) => ({
   display: "flex",
   justifyContent: "space-between",
   padding: "50px 10%",
-  backgroundColor: "#000",
-  color: "#fff",
-});
+  backgroundColor: props.theme.colors.background || "#000",
+  color: props.theme.colors.text || "#fff",
+}));
 
 export const FooterSection = styled.div({
   display: "flex",
@@ -15,10 +15,11 @@ export const FooterSection = styled.div({
   maxWidth: "300px",
 });
 
-export const Logo = styled.div({
+export const Logo = styled.div((props) => ({
   fontSize: "24px",
   fontWeight: "bold",
-});
+  fontFamily: props.theme.font.heading,
+}));
 
 export const Description = styled.p({
   fontSize: "14px",
@@ -40,23 +41,24 @@ export const SocialIcons = styled.div({
   },
 });
 
-export const SectionTitle = styled.h4({
+export const SectionTitle = styled.h4((props) => ({
   fontSize: "16px",
   fontWeight: "bold",
   marginBottom: "15px",
-});
+  fontFamily: props.theme.font.heading,
+}));
 
 export const List = styled.ul({
   listStyle: "none",
   padding: 0,
 });
 
-export const ListItem = styled.li({
+export const ListItem = styled.li((props) => ({
   fontSize: "14px",
   marginBottom: "10px",
   cursor: "pointer",
   transition: "color 0.3s ease",
   "&:hover": {
-    color: "#007bff",
+    color: props.theme.colors.primary,
   },
-});
+}));
