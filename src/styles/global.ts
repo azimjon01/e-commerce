@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
+import { ThemeType } from "./theme";
 
-const GlobalStyles = css`
+const GlobalStyles = (theme: ThemeType) => css`
   *,
   *::before,
   *::after {
@@ -13,8 +14,12 @@ const GlobalStyles = css`
   body {
     width: 100%;
     height: 100%;
-    font-family: "Inter", sans-serif;
-    background-color: #f9f9f9;
+    font-family: ${theme.font.base};
+    background-color: ${theme.colors.background};
+    color: ${theme.colors.text};
+    transition:
+      background-color 0.3s,
+      color 0.3s;
   }
 
   a {
@@ -25,8 +30,6 @@ const GlobalStyles = css`
   ul,
   ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
 `;
 

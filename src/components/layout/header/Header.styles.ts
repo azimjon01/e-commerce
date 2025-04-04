@@ -1,15 +1,18 @@
 import styled from "@emotion/styled";
 
-export const BigContainer = styled.div({
+// Katta container
+export const BigContainer = styled.div((props) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
-  backgroundColor: "#fff",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-});
+  backgroundColor: props.theme.colors.background,
+  color: props.theme.colors.text,
+  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
+}));
 
+// Yuqori bar
 export const TopBar = styled.div({
   display: "flex",
   justifyContent: "center",
@@ -19,15 +22,17 @@ export const TopBar = styled.div({
   padding: "15px 0",
 });
 
+// Logo
 export const Logo = styled.img({
   width: 76,
   height: 22,
 });
 
-export const SearchBar = styled.div({
+// Qidiruv paneli
+export const SearchBar = styled.div((props) => ({
   display: "flex",
   alignItems: "center",
-  backgroundColor: "#F5F5F5",
+  backgroundColor: props.theme.colors.border,
   padding: "7px",
   borderRadius: 8,
   width: "30%",
@@ -37,63 +42,65 @@ export const SearchBar = styled.div({
     outline: "none",
     padding: "5px",
     width: "100%",
+    color: props.theme.colors.text,
   },
   "& svg": {
     color: "#666",
     cursor: "pointer",
   },
-});
+}));
 
 export const SearchIcon = styled.img({
   width: 20,
   height: 20,
 });
 
-export const SearchInput = styled.input({
-  color: "#656565",
-});
+export const SearchInput = styled.input((props) => ({
+  color: props.theme.colors.text,
+}));
 
-export const NavIcons = styled.div({
+// Navigatsiya ikonkalari
+export const NavIcons = styled.div((props) => ({
   display: "flex",
   gap: "30px",
   fontSize: "14px",
-  fontWeight: "500",
-  color: "#2E2E2E",
-});
+  fontWeight: 500,
+  color: props.theme.colors.text,
+}));
 
-export const NavItem = styled.ul({
+export const NavItem = styled.ul((props) => ({
   cursor: "pointer",
   transition: "color 0.3s ease",
-  color: "#2E2E2E",
+  color: props.theme.colors.text,
   "&:hover": {
-    color: "#007bff",
+    color: props.theme.colors.primary,
   },
   ":active": {
     color: "#fff",
     fontWeight: "bold",
   },
-});
+}));
 
-export const UserActions = styled.div({
+export const UserActions = styled.div((props) => ({
   display: "flex",
   gap: "15px",
   fontSize: "18px",
   cursor: "pointer",
   "& svg": {
     transition: "color 0.3s ease",
+    color: props.theme.colors.text,
     "&:hover": {
-      color: "#007bff",
+      color: props.theme.colors.primary,
     },
   },
-});
+}));
 
 export const HeaderIcon = styled.img({
   width: 20,
   height: 20,
 });
 
-// Header bottom
-
+// Pastgi bar
 export const BottomBar = styled.div({
   display: "flex",
   justifyContent: "center",
@@ -130,3 +137,16 @@ export const BottomIcon = styled.img({
   width: 20,
   height: 20,
 });
+
+// Dark / Light toggle button
+export const DarkLightButton = styled.button((props) => ({
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+  fontSize: "18px",
+  color: props.theme.colors.text,
+  transition: "color 0.3s ease",
+  "&:hover": {
+    color: props.theme.colors.primary,
+  },
+}));

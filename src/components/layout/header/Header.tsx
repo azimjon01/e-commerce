@@ -3,6 +3,7 @@ import {
   BottomBar,
   BottomIcon,
   Category,
+  DarkLightButton,
   HeaderIcon,
   Logo,
   NavIcons,
@@ -14,7 +15,11 @@ import {
   UserActions,
 } from "./Header.styles";
 
-const Header = () => {
+type HeaderProps = {
+  toggleTheme: () => void;
+};
+
+const Header = ({ toggleTheme }: HeaderProps) => {
   return (
     <BigContainer>
       <TopBar>
@@ -34,6 +39,7 @@ const Header = () => {
           <HeaderIcon src="/assets/logos/header/header-busket.svg" />
           <HeaderIcon src="/assets/logos/header/header-avatar.svg" />
         </UserActions>
+        <DarkLightButton onClick={toggleTheme}>🌙/☀️</DarkLightButton>
       </TopBar>
 
       <BottomBar>

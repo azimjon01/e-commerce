@@ -21,7 +21,11 @@ const ROUTES_CONFIG = [
   // },
 ];
 
-const AppRoutes = () => {
+type AppRoutesProps = {
+  toggleTheme: () => void;
+};
+
+const AppRoutes = ({ toggleTheme }: AppRoutesProps) => {
   return (
     <>
       <Global styles={GlobalStyles} />
@@ -31,7 +35,7 @@ const AppRoutes = () => {
             <Route
               key={path}
               path={path}
-              element={<Layout>{element}</Layout>}
+              element={<Layout toggleTheme={toggleTheme}>{element}</Layout>}
             />
           ))}
         </Routes>
