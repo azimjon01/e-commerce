@@ -16,6 +16,11 @@ export const lightTheme = {
     md: "16px",
     lg: "32px",
   },
+  shadows: {
+    sm: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    md: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+    lg: "0px 6px 10px rgba(0, 0, 0, 0.15)",
+  },
   borderRadius: "12px",
 };
 
@@ -37,8 +42,12 @@ export const darkTheme = {
     md: "16px",
     lg: "32px",
   },
+  shadows: {
+    sm: "0px 2px 4px rgba(255, 255, 255, 0.05)",
+    md: "0px 4px 6px rgba(255, 255, 255, 0.08)",
+    lg: "0px 6px 10px rgba(255, 255, 255, 0.12)",
+  },
   borderRadius: "12px",
 };
 
-// Tiplar uchun export
 export type ThemeType = typeof lightTheme;

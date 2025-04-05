@@ -19,6 +19,11 @@ declare module "@emotion/react" {
       md: string;
       lg: string;
     };
+    shadows: {
+      sm: string;
+      md: string;
+      lg: string;
+    };
     borderRadius: string;
   }
 }

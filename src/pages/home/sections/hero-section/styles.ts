@@ -15,14 +15,15 @@ export const TextContent = styled.div({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  alignItems: "start",
   gap: 20,
 });
 
-export const BigTitle = styled.h1({
-  color: "#909090",
+export const BigTitle = styled.h1((props) => ({
+  color: props.theme.colors.text,
   fontSize: 20,
   fontWeight: 500,
-});
+}));
 
 export const Title = styled.h1({
   fontSize: "70px",
@@ -34,27 +35,26 @@ export const TitlePro = styled.span({
   fontWeight: "500",
 });
 
-export const Subtitle = styled.p({
-  color: "#909090",
+export const Subtitle = styled.p((props) => ({
+  color: props.theme.colors.text,
   fontSize: "17px",
-  opacity: 0.8,
   fontWeight: 500,
-});
+}));
 
-export const Button = styled.button({
-  width: "40%",
+export const Button = styled.button((props) => ({
   padding: "10px 20px",
   fontSize: "16px",
-  backgroundColor: "#ffffff",
-  color: "#000",
+  backgroundColor: props.theme.colors.text,
+  color: props.theme.colors.background,
   border: "1px solid #000",
   cursor: "pointer",
   borderRadius: "5px",
   transition: "0.3s",
   ":hover": {
-    backgroundColor: "#ddd",
+    backgroundColor: props.theme.colors.background,
+    color: props.theme.colors.text,
   },
-});
+}));
 
 export const Image = styled.img({
   position: "absolute",
