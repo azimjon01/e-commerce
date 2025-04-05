@@ -11,12 +11,17 @@ export const TabsWrapper = styled.div({
   flexWrap: "wrap",
 });
 
-export const Tab = styled.button(({ active }: { active?: boolean }) => ({
+interface TabProps {
+  active?: boolean;
+}
+
+export const Tab = styled.button<TabProps>(({ theme, active }) => ({
   border: "none",
-  background: "none",
-  fontWeight: active ? 600 : 400,
+  background: theme.colors.background,
+  color: theme.colors.text,
+  fontWeight: 700,
   fontSize: "16px",
-  borderBottom: active ? "2px solid black" : "none",
+  borderBottom: active ? "3px solid red" : `2px solid ${theme.colors.text}`,
   cursor: "pointer",
   padding: "8px 0",
 }));

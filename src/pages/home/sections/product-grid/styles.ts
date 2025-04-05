@@ -69,7 +69,7 @@ export const Button = styled.button((props) => ({
   fontSize: "16px",
   backgroundColor: props.theme.colors.text,
   color: props.theme.colors.background,
-  border: "1px solid #000",
+  border: `1px solid ${props.theme.colors.text}`,
   cursor: "pointer",
   borderRadius: "5px",
   transition: "0.3s",

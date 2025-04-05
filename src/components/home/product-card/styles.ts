@@ -36,16 +36,18 @@ export const Price = styled.div({
   margin: "8px 0",
 });
 
-export const BuyButton = styled.button(({ theme }) => ({
-  backgroundColor: "#000",
-  color: "#fff",
-  border: "none",
-  padding: "10px 16px",
-  borderRadius: "6px",
+export const BuyButton = styled.button((props) => ({
+  padding: "10px 20px",
+  fontSize: "16px",
+  backgroundColor: props.theme.colors.text,
+  color: props.theme.colors.background,
+  border: `1px solid ${props.theme.colors.text}`,
   cursor: "pointer",
-  marginTop: "8px",
+  borderRadius: "5px",
+  transition: "0.3s",
   ":hover": {
-    opacity: 0.9,
+    backgroundColor: props.theme.colors.background,
+    color: props.theme.colors.text,
   },
 }));
 
