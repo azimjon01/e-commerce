@@ -22,6 +22,7 @@ export const TopBar = styled.div({
 });
 
 export const Logo = styled.img({
+  cursor: "pointer",
   width: 76,
   height: 22,
 });
