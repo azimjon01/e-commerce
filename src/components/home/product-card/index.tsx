@@ -23,7 +23,7 @@ export const ProductCard = ({
       <Favorite isActive={isFavorite}>❤️</Favorite>
       <Image src={imageUrl} alt={name} />
       <Title>{description}</Title>
-      <Price>{price}</Price>
+      <Price>{price}$</Price>
       <BuyButton>Buy Now</BuyButton>
     </Card>
   );
