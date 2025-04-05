@@ -23,20 +23,24 @@ export const Card = styled.div((props) => ({
 }));
 
 export const BigCard = styled(Card)({
+  cursor: "pointer",
   gridColumn: "1 / span 2",
   gridRow: "1 / span 1",
 });
 
 export const SideCard = styled(Card)({
+  cursor: "pointer",
   gridColumn: "3 / span 1",
   gridRow: "1 / span 2",
 });
 
 export const SmallLeft = styled(Card)({
+  cursor: "pointer",
   gridColumn: "1 / span 1",
 });
 
 export const SmallRight = styled(Card)({
+  cursor: "pointer",
   gridColumn: "2 / span 1",
 });
 

@@ -11,6 +11,7 @@ export const Card = styled.div(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
+  cursor: "pointer",
   transition: "transform 0.3s ease",
   ":hover": {
     transform: "scale(1.03)",

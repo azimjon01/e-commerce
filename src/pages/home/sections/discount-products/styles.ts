@@ -25,6 +25,11 @@ export const Card = styled.div(({ theme }) => ({
   alignItems: "center",
   textAlign: "center",
   gap: "10px",
+  cursor: "pointer",
+  transition: "transform 0.3s ease",
+  ":hover": {
+    transform: "scale(1.05)",
+  },
 }));
 
 export const DiscountIcon = styled.div((props) => ({

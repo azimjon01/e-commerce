@@ -15,6 +15,7 @@ export const Card = styled.div<{ dark?: boolean }>(({ theme, dark }) => ({
   boxShadow: theme.shadows.lg,
   display: "flex",
   flexDirection: "column",
+  cursor: "pointer",
   alignItems: "flex-start",
   justifyContent: "space-between",
   gap: "16px",

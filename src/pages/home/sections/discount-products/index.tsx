@@ -7,7 +7,6 @@ import {
   Title,
   Price,
   BuyButton,
-  HeartIcon,
   DiscountIcon,
 } from "./styles";
 
