@@ -1,4 +1,5 @@
 import BrowseSection from "./sections/browse-section";
+import CardGrid from "./sections/card-grid";
 import HeroSection from "./sections/hero-section";
 import ProductGrid from "./sections/product-grid";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <ProductGrid />
       <BrowseSection />
+      <CardGrid />
     </>
   );
 };
